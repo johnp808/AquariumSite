@@ -11,13 +11,13 @@
 </head>
 <body class="display-background">
 
-<h1 class="display-h1">${user.userName}</h1>
+	<h1 class="display-h1">${user.userName}</h1>
 
-<h1 class="display-h1">${user.age}</h1>
+	<h1 class="display-h1">${user.age}</h1>
 
-<h1 class="display-h1">${user.location}</h1>
+	<h1 class="display-h1">${user.location}</h1>
 
-<h1><img src="${user.profilePicture}" style="border: 5px solid black; width:200px; height:200px" width="200" width="200"></img></h1>
+	<h1><img src="${user.profilePicture}" style="border: 5px solid black; width:200px; height:200px" width="200" width="200"></img></h1>
 
 <!-- set up for each to iterate over each aquarium and display their individual 
 info once clicked on once aquarium controller is built out -->
@@ -26,16 +26,18 @@ info once clicked on once aquarium controller is built out -->
 
 
 <%-- </c:forEach> --%>
-<form action="updateUserSlot.do" method="POST">
+
+	<form action="updateUserSlot.do" method="POST">
 		<input type="hidden" name="userId" value="${user.id}" /><br><input class="update-button" type="submit" value="Update User"/>
 	</form>
 
-<form action="deleteUser.do" method="POST">
+	<form action="deleteUser.do" method="POST">
 		<input type="hidden" name="userId" value="${user.id}" /><br><input class="delete-button" type="submit" value="Delete User"/>
 	</form>
+	
 	<br>
 	
+	<a href="home.do"> <input class="home-button" type="submit" value="Return Home"/></a>
 	
-<a href="home.do"> <input class="home-button" type="submit" value="Return Home"/></a>
 </body>
 </html>

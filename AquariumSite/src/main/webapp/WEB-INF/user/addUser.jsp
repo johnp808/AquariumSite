@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="add-background">
+	
 	<h1 align="center"> Add A New User</h1>
 	
 	<div class="white-text">
@@ -25,8 +26,10 @@
 				<input class="add-button" type="submit" value="Add New User"/>
 				<br>
 	</form>
+	
 	<br>
 		<a href="home.do"> <input class="home-button" type="submit" value="Return Home"/></a>
 	</div>
+	
 </body>
 </html>

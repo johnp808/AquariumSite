@@ -9,9 +9,9 @@
 </head>
 <body class="updated-background">
 
-<h1>${user.userName} Updated!</h1>
+	<h1>${user.userName} Updated!</h1>
 
-<a href="home.do"> <input class="home-button" type="submit" value="Return Home"/></a>
+	<a href="home.do"> <input class="home-button" type="submit" value="Return Home"/></a>
 
 </body>
 </html>
