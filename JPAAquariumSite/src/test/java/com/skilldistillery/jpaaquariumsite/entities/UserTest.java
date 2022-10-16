@@ -60,4 +60,11 @@ public class UserTest {
 		assertEquals("Tokyo", user.getLocation());
 	}
 	
+	@Test
+	void test_user_aquariums() {
+		user = em.find(User.class, 1);
+		assertNotNull(user);
+		assertEquals("Tokyo", user.getLocation());
+	}
+	
 }

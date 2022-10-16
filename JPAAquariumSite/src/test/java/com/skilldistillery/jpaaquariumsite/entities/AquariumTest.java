@@ -51,7 +51,7 @@ public class AquariumTest {
 	@Test
 	void test_aquarium_user_id_mapping() {
 		assertNotNull(aquarium);
-		assertEquals("Uzidontbrick", aquarium.getUserId().getUserName());
+		assertEquals("Uzidontbrick", aquarium.getFishInAquarium().get(0).getAquarium().getUserId().getUserName());
 	}
 	
 	@Test

@@ -22,9 +22,10 @@ DROP TABLE IF EXISTS `user` ;
 
 CREATE TABLE IF NOT EXISTS `user` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR(100) NOT NULL,
+  `username` VARCHAR(100) NULL,
   `age` INT NULL,
   `location` VARCHAR(100) NULL,
+  `profile_picture` VARCHAR(4000) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -106,8 +107,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `aquariumdb`;
-INSERT INTO `user` (`id`, `username`, `age`, `location`) VALUES (1, 'Uzidontbrick', 30, 'Hawaii');
-INSERT INTO `user` (`id`, `username`, `age`, `location`) VALUES (2, 'AimiNakas', 27, 'Tokyo');
+INSERT INTO `user` (`id`, `username`, `age`, `location`, `profile_picture`) VALUES (1, 'Uzidontbrick', 30, 'Hawaii', 'https://media.istockphoto.com/photos/colorful-exotic-fish-swimming-in-deep-blue-water-aquarium-with-green-picture-id1358744909?k=20&m=1358744909&s=612x612&w=0&h=fBb-xv_z8tqMVGb0G9lvrjtmGHwEudiibnEcCkWANtE=');
+INSERT INTO `user` (`id`, `username`, `age`, `location`, `profile_picture`) VALUES (2, 'AimiNakas', 27, 'Tokyo', 'https://i.ytimg.com/vi/MmP6Ia1GN8c/maxresdefault.jpg');
 
 COMMIT;
 

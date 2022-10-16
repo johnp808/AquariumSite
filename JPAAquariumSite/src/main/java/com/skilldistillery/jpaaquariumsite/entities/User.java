@@ -19,6 +19,9 @@ public class User {
 	
 	private String location;
 	
+	@Column(name="profile_picture")
+	private String profilePicture;
+	
 	public User() {}
 
 	public int getId() {
@@ -53,6 +56,14 @@ public class User {
 		this.location = location;
 	}
 
+	public String getProfilePicture() {
+		return profilePicture;
+	}
+
+	public void setProfilePicture(String profilePicture) {
+		this.profilePicture = profilePicture;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -72,6 +83,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", location=" + location + "]";
+		return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", location=" + location
+				+ ", profilePicture=" + profilePicture + "]";
 	}
 }

@@ -1,1 +1,2 @@
 rootProject.name = 'AquariumSite'
+includeFlat 'JPAAquariumSite'
