@@ -17,9 +17,9 @@ public class Aquarium {
 	@Id
 	private int id;
 	
-	@ManyToOne
-    @JoinColumn(name="user_id")
-	private User userId;
+	
+	@Column(name="aquarium_number")
+	private int aquariumNumber;
 	
 	@Column(name="tank_size_in_gallons")
 	private Integer tankSizeInGallons;
@@ -36,8 +36,14 @@ public class Aquarium {
 	@Column(name="aquarium_start_date")
 	private Date aquariumStartDate;
 
+	@Column(name="picture_of_aquarium")
+	private String aquariumPic;
+
 	@OneToMany(mappedBy = "aquarium")
 	List<FishHasAquarium> fishInAquarium;
+	
+	@OneToMany(mappedBy = "aquarium")
+    List<UserHasAquarium> userAquariums;
 	
 	public Aquarium() {}
 	
@@ -49,12 +55,12 @@ public class Aquarium {
 		this.id = id;
 	}
 
-	public User getUserId() {
-		return userId;
+	public int getAquariumNumber() {
+		return aquariumNumber;
 	}
 
-	public void setUserId(User userId) {
-		this.userId = userId;
+	public void setAquariumNumber(int aquariumNumber) {
+		this.aquariumNumber = aquariumNumber;
 	}
 
 	public Integer getTankSizeInGallons() {
@@ -97,13 +103,28 @@ public class Aquarium {
 		this.aquariumStartDate = aquariumStartDate;
 	}
 
-	
+	public String getAquariumPic() {
+		return aquariumPic;
+	}
+
+	public void setAquariumPic(String aquariumPic) {
+		this.aquariumPic = aquariumPic;
+	}
+
 	public List<FishHasAquarium> getFishInAquarium() {
 		return fishInAquarium;
 	}
 
 	public void setFishInAquarium(List<FishHasAquarium> fishInAquarium) {
 		this.fishInAquarium = fishInAquarium;
+	}
+
+	public List<UserHasAquarium> getUserAquariums() {
+		return userAquariums;
+	}
+
+	public void setUserAquariums(List<UserHasAquarium> userAquariums) {
+		this.userAquariums = userAquariums;
 	}
 
 	@Override
@@ -125,10 +146,11 @@ public class Aquarium {
 
 	@Override
 	public String toString() {
-		return "Aquarium [id=" + id + ", userId=" + userId + ", tankSizeInGallons=" + tankSizeInGallons
+		return "Aquarium [id=" + id + ", aquariumNumber=" + aquariumNumber + ", tankSizeInGallons=" + tankSizeInGallons
 				+ ", typeOfAquarium=" + typeOfAquarium + ", totalAmountOfFish=" + totalAmountOfFish
 				+ ", totalAmountOfPlants=" + totalAmountOfPlants + ", aquariumStartDate=" + aquariumStartDate
-				+ ", fishInAquarium=" + fishInAquarium + "]";
+				+ ", aquariumPic=" + aquariumPic + ", fishInAquarium=" + fishInAquarium + ", userAquariums="
+				+ userAquariums + "]";
 	}
 	
 	

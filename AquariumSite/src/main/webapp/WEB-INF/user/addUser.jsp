@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Create User</title>
 <link rel="stylesheet" href="css/main.css">
+<link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body class="add-background">
 	
@@ -18,17 +19,18 @@
 				<br>
 			    Age: <input type="text" name="age"/>
 				<br>
-				Location: <input style="height: 10%; width: 11.7%; box-sizing: border-box;" type="text" name="location"/>
+				Location: <input style="height: 10%; width: 11.65%; box-sizing: border-box;" type="text" name="location"/>
 				<br>
-				Profile Picture Url: <input style="height: 10%; width: 7.9%; box-sizing: border-box;" type="text" name="profilePicture"/>
+				Profile Picture Url: <input style="height: 10%; width: 7.9%; box-sizing: border-box;" type="text" name="profilePicture" placeholder="Default profile picture" value="https://i.ibb.co/2d7Sj6Z/johngates.png"/>
 				<br>
 				<br>
-				<input class="add-button" type="submit" value="Add New User"/>
+				<input class="add-button" type="submit" value="Add New User &#67166;&plus;"/>
 				<br>
 	</form>
 	
 	<br>
-		<a href="home.do"> <input class="home-button" type="submit" value="Return Home"/></a>
+	
+	<a href="home.do"> <input class="home-button" type="submit" value="Return Home &#8617;"/></a>
 	</div>
 	
 </body>

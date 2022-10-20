@@ -61,10 +61,14 @@ public class UserTest {
 	}
 	
 	@Test
-	void test_user_aquariums() {
-		user = em.find(User.class, 1);
+	void test_aquarium_user_id_mapping() {
 		assertNotNull(user);
-		assertEquals("Tokyo", user.getLocation());
+		assertEquals(4, user.userAquariums.size());
 	}
 	
+	@Test
+	void test_aquarium_user_id_mappings_crazy() {
+		assertNotNull(user);
+		assertEquals(4, user.userAquariums);
+	}
 }

@@ -1,10 +1,12 @@
 package com.skilldistillery.jpaaquariumsite.entities;
 
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -21,6 +23,9 @@ public class User {
 	
 	@Column(name="profile_picture")
 	private String profilePicture;
+	
+	@OneToMany(mappedBy = "user")
+    List<UserHasAquarium> userAquariums;
 	
 	public User() {}
 
@@ -63,6 +68,14 @@ public class User {
 	public void setProfilePicture(String profilePicture) {
 		this.profilePicture = profilePicture;
 	}
+	
+	public List<UserHasAquarium> getUserAquariums() {
+		return userAquariums;
+	}
+
+	public void setUserAquariums(List<UserHasAquarium> userAquariums) {
+		this.userAquariums = userAquariums;
+	}
 
 	@Override
 	public int hashCode() {
@@ -84,6 +97,6 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", location=" + location
-				+ ", profilePicture=" + profilePicture + "]";
+				+ ", profilePicture=" + profilePicture + ", userAquariums=" + userAquariums + "]";
 	}
 }

@@ -48,11 +48,11 @@ public class AquariumTest {
 		assertEquals(10, aquarium.getTotalAmountOfFish());
 	}
 	
-	@Test
-	void test_aquarium_user_id_mapping() {
-		assertNotNull(aquarium);
-		assertEquals("Uzidontbrick", aquarium.getFishInAquarium().get(0).getAquarium().getUserId().getUserName());
-	}
+//	@Test
+//	void test_aquarium_user_id_mapping() {
+//		assertNotNull(aquarium);
+//		assertEquals("Uzidontbrick", aquarium.getFishInAquarium().get(0).getAquarium().getUserId().getUserName());
+//	}
 	
 	@Test
 	void test_aquarium_many_to_one_mapping_to_fish_size() {
@@ -68,12 +68,12 @@ public class AquariumTest {
 		assertEquals(35, aquarium.getFishInAquarium().get(0).getQuantity());
 	}
 	
-	@Test
-	void test_aquarium_user_2_id_and_amount_of_fish() {
-		aquarium = em.find(Aquarium.class, 5);
-		assertNotNull(aquarium);
-		assertEquals(55, aquarium.getTotalAmountOfFish());
-		assertEquals("AimiNakas", aquarium.getUserId().getUserName());
-	}
-	
+//	@Test
+//	void test_aquarium_user_2_id_and_amount_of_fish() {
+//		aquarium = em.find(Aquarium.class, 5);
+//		assertNotNull(aquarium);
+//		assertEquals(55, aquarium.getTotalAmountOfFish());
+//		assertEquals("AimiNakas", aquarium.getUserId().getUserName());
+//	}
+//	
 }

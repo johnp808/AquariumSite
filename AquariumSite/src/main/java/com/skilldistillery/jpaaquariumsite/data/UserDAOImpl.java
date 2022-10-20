@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
 
+import com.skilldistillery.jpaaquariumsite.entities.Aquarium;
 import com.skilldistillery.jpaaquariumsite.entities.User;
 
 @Service
